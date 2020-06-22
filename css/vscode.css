@@ -1,0 +1,393 @@
+/*-----------------------------------reset-------------------------------------*/
+@charset "utf-8";
+/* @import url("animate.css"); */
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#fff;
+	font-size:16px;
+	color:#666666;
+	font-family: "微软雅黑";
+	overflow-x: hidden;
+}
+::selection{
+	/* background-color: #4479a1; */
+	background-color: #0066b8;
+	color: #ffffff;
+}
+::-webkit-selection{
+	background-color: #0066b8;
+	color: #ffffff;
+}
+
+p,h1,h2,h3,h4,h5,input,ul,li,dl,dt,dd,img,pre{
+	padding:0;
+	margin:0;
+	outline:0;
+	border:0;
+}
+
+i,em,cite{
+	font-style:normal;
+}
+
+li{
+	list-style:none;
+}
+a{
+	color: black;
+}
+a,a:hover,a:active,a:visited,a:link{
+	text-decoration:none;
+}
+img{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.fl{
+	float:left;
+}
+
+.fr{
+	float:right;
+}
+
+.clearfloat{
+	clear:both;
+	overflow:hidden;
+}
+.clearfloatx{
+	clear:both;
+}
+.w1440{
+	width:1440px;
+	margin:0 auto;
+	position: relative;
+}
+.w1250{
+	width: 1250px;
+	margin: 0 auto;
+	position: relative;
+}
+.transition5{
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.transition3{
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+/*文字渐变的类*/
+.textlinear{
+	background: -webkit-linear-gradient(#33cccc,#00ccff,#3366cc);
+	background:    -moz-linear-gradient(#33cccc,#00ccff,#3366cc);
+	background:     -ms-linear-gradient(#33cccc,#00ccff,#3366cc);
+	background:      -o-linear-gradient(#33cccc,#00ccff,#3366cc);
+	background:         linear-gradient(#33cccc,#00ccff,#3366cc);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+/*背景渐变的类*/
+.bglinear{
+	background: -webkit-linear-gradient(to right,#0e97fd,#4ec8fe);
+	background:    -moz-linear-gradient(to right,#0e97fd,#4ec8fe);
+	background:     -ms-linear-gradient(to right,#0e97fd,#4ec8fe);
+	background:      -o-linear-gradient(to right,#0e97fd,#4ec8fe);
+	background:         linear-gradient(to right,#0e97fd,#4ec8fe);
+	box-shadow: 0 0 15px 0 rgba(68,192,254,.7);
+}
+
+/* 滚动条整体部分，其中的属性: width,height,background,border等。 */
+body{
+	/* height: 667px; */
+	overflow-y: auto;
+}
+body::-webkit-scrollbar{
+	width: 14px;
+}
+/* 滚动条两端的按钮。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果。 */
+body::-webkit-scrollbar-button{
+
+}
+/* 外层轨道 */
+body::-webkit-scrollbar-track{
+	/* background: #cccccc; */
+	/* background: #f1f1f1; */
+	border-radius: 20px;
+	-webkit-box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
+	/* box-shadow: inset 0 0 5px #ff00e0; */
+	/* box-shadow: inset 0 0 3px #8300ff; */
+	/* box-shadow: inset 0 0 3px #ff4181; */
+}
+/* 内层轨道 */
+body::-webkit-scrollbar-track-piece{
+
+}
+/* 滚动条里面可以拖动的那部分 */
+body::-webkit-scrollbar-thumb{
+	/* background: #00CC33; */
+	/* background: #ff5f99; */
+	/* background: rgba(255, 95, 153, 0.5); */
+	background: -webkit-linear-gradient(160deg,#ff00e0,#00dcff);
+	background:    -moz-linear-gradient(160deg,#ff00e0,#00dcff);
+	background:     -ms-linear-gradient(160deg,#ff00e0,#00dcff);
+	background:      -o-linear-gradient(160deg,#ff00e0,#00dcff);
+	background:         linear-gradient(160deg,#ff00e0,#00dcff);
+	/* background:         linear-gradient(160deg,#8300ff,#ff5f99); */
+	border-radius: 20px;
+}
+/* 边角，两个滚动条交汇处 */
+body::-webkit-scrollbar-corner{
+
+}
+
+.title{
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+	/*只能用90deg*/
+	/* background: -webkit-linear-gradient(90deg,#ff00e0,#00dcff,#00ff4c,#ff00e0);
+	background:    -moz-linear-gradient(90deg,#ff00e0,#00dcff,#00ff4c,#ff00e0);
+	background:     -ms-linear-gradient(90deg,#ff00e0,#00dcff,#00ff4c,#ff00e0);
+	background:      -o-linear-gradient(90deg,#ff00e0,#00dcff,#00ff4c,#ff00e0);
+	background:         linear-gradient(90deg,#ff00e0,#00dcff,#00ff4c,#ff00e0); */
+	background-size: 400%;
+	min-height: 200px;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom: 30px;
+	/* animation: ssw 20s linear infinite; */
+	background: linear-gradient(92deg, #f35626 0%,#feab3a 100%);
+	animation: hue 60s infinite linear;
+}
+.section{
+	margin-bottom: 30px;
+}
+.section h2{
+	margin-bottom: 30px;
+}
+.section img{
+	display: block;
+	max-width: 100%;
+}
+.section p{
+	margin-bottom: 30px;
+	line-height: 30px;
+}
+.section h2 span,.section h3 span,.section h4 span,.end h1 span{
+	background: -webkit-linear-gradient(160deg,#ff00e0,#00dcff);
+	background:    -moz-linear-gradient(160deg,#ff00e0,#00dcff);
+	background:     -ms-linear-gradient(160deg,#ff00e0,#00dcff);
+	background:      -o-linear-gradient(160deg,#ff00e0,#00dcff);
+	background:         linear-gradient(160deg,#ff00e0,#00dcff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.section h3 span{
+	font-size: 24px;
+}
+.section h4 span{
+	font-size: 20px;
+}
+.section h4{
+	margin-bottom: 30px;
+}
+.section a{
+	color: #0066b8;
+	border-radius: 4px;
+	padding: 0 4px;
+}
+.section a:hover{
+	color: #ffffff;
+	background: #0066b8;
+}
+.section img:hover{
+	cursor: zoom-in;
+}
+.key{
+	color: #0066b8;
+}
+.a{
+	line-height: 30px;
+}
+.a a{
+	color: #0066b8;
+	border-radius: 4px;
+}
+.a a:hover{
+	color: #ffffff;
+	background: #0066b8;
+}
+.small{
+	color: red;
+}
+.sass{
+	color: #ff007f;
+	/* color: #cc6699; */
+}
+.sass a{
+	color: #ff007f;
+}
+.sass a:hover{
+	color: #ffffff;
+	background-color: #ff007f;
+}
+.divider{
+	height: 30px;
+}
+.end{
+	padding: 10px 0 40px 0;
+	text-align: center;
+}
+
+.back{
+	display: none;
+	width: 50px;
+	height: 50px;
+	line-height: 40px;
+	background: #00CCFF;
+	position: fixed;
+	/* left: 50%; */
+	right: 80px;
+	/* margin-left: 530px; */
+	bottom: 80px;
+	text-align: center;
+	font-size: 40px;
+	color: #ffffff;
+	cursor: pointer;
+	border-radius: 6px;
+	background: -webkit-linear-gradient(120deg,#ff00df,#00f5ff);
+	background:    -moz-linear-gradient(120deg,#ff00df,#00f5ff);
+	background:     -ms-linear-gradient(120deg,#ff00df,#00f5ff);
+	background:      -o-linear-gradient(120deg,#ff00df,#00f5ff);
+	background:         linear-gradient(120deg,#ff00df,#00f5ff);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.back i{
+	font-size: 26px;
+}
+.progress{
+	height: 4px;
+	/* background: #0066b8; */
+	background:         linear-gradient(120deg,#ff00df,#00f5ff);
+	/* width: 20px; */
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.shadow{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	cursor: zoom-out;
+}
+.origin{
+	position: absolute;
+	cursor: grab;
+}
+.hint{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	/* background: #000000; */
+	background: linear-gradient(45deg, #d800ff, #00ffb8);
+	color: #f3f3f3;
+	padding: 5px 10px;
+	text-align: center;
+	border-radius: 4px;
+	margin-left: -90px;
+	z-index: 999;
+	transition: all 0.5s;
+	opacity: 0;
+}
+.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #d800ff, #00ffb8);
+    border-radius: 52px;
+    padding: 9px 10px;
+    color: aliceblue;
+	z-index: 99;
+}
+.close i{
+	font-size: 22px;
+}
+
+@media only screen and (max-width: 1920px) {
+	.w1440{
+		width: 1440px;
+	}
+}
+@media only screen and (max-width: 1440px) {
+	.w1440{
+		width: 1250px;
+	}
+}
+@media only screen and (max-width: 414px) {
+	.w1440{
+		width: 100%;
+	}
+	.title{
+		padding: 0 10px;
+		min-height: 100px;
+	}
+	.title h1{
+		font-size: 24px;
+		width: 100%;
+	}
+	.container{
+		padding: 0 10px;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	.a a:hover{
+		color: #0066b8;
+		background: #ffffff;
+	}
+	.back{
+		right: 40px;
+		bottom: 40px;
+	}
+}
+@keyframes ssw {
+	0%{ background-position: 0% }
+	100%{ background-position: 400% }
+}
+@keyframes hue{
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	100% {
+		filter: hue-rotate(-360deg);
+	}
+}

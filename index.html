@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vscode安装及使用教程</title>
+	<link rel="icon" href="images/icon.png"/>
+    <link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_861679_2zv61wpyxbr.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/vscode.css"/>
+</head>
+	<body>
+		<div class="title"><h1 class="wow bounceInDown">vscode安装及使用教程</h1></div>
+		<div class="container w1440">
+			<div class="section">
+				<h2  class="wow bounceInDown"><span>一、安装vscode</span></h2>
+				<p>1、到vscode官网<a href="https://code.visualstudio.com/docs/?dv=win" target="_blank">https://code.visualstudio.com/docs/?dv=win</a>下载vscode并安装</p>
+				
+				<img src="./images/downloadvscode.png" alt="downloadvscode.png" class="wow fadeInRight">
+				<p></p>
+				<p>2、将语言切换为中文简体：打开vscode，按下组合键<em class="key">Ctrl+Shift+P</em>，搜索<em class="key">configure display language</em>，点击进入，然后点击<em class="key">Install additional languages...</em>，找到中文简体，点击install安装中文简体语言，安装完成重启即可</p>
+				<img src="./images/vscodeChangeLanguage01.png" alt="vscodeChangeLanguage01.png" class="wow slideInLeft">
+				<img src="./images/vscodeChangeLanguage02.png" alt="vscodeChangeLanguage02.png" class="wow flash">
+				<img src="./images/vscodeChangeLanguage03.png" alt="vscodeChangeLanguage03.png" class="wow rubberBand">
+				<p></p>
+				<p>3、新建一个项目，在D盘新建一个vscodeworkspace文件夹，在vscodeworkspace下新建一个名为project01的项目目录，打开vscode，打开文件夹，选择刚刚新建的project01目录，打开完了之后，新建一个文件，名为index.html，然后在index.html中输入!，按下Tab键声明文档类型为html5类型文件</p>
+				<img src="./images/vscodenewproject01.png" alt="vscodenewproject01.png" class="wow shake">
+				<img src="./images/vscodenewproject02.png" alt="vscodenewproject02.png" class="wow tada">
+				<img src="./images/vscodenewproject03.png" alt="vscodenewproject03.png" class="wow wobble">
+				<p></p>
+				<p>4、更改字体大小，文件-->首选项-->设置，可以字体以及字体大小</p>
+				<img src="./images/vscodeChangeFont.png" alt="vscodeChangeFont.png" class="wow jello">
+				<p></p>
+				<p>5、使用Ctrl+鼠标滚轮更改字体大小，文件-->首选项-->设置-->功能-->扩展，点击：在settings.json中编辑，在settings.json中添加一行：<em class="key">"editor.mouseWheelZoom": true,</em></p>
+				<img src="./images/changefontsizewithCtrl+wheel01.png" alt="changefontsizewithCtrl+wheel01.png" class="wow bounceIn">
+				<img src="./images/changefontsizewithCtrl+wheel02.png" alt="changefontsizewithCtrl+wheel02.png" class="wow fadeInDown">
+				<p></p>
+				<p>6、安装atom的one dark主题，文件-->首选项-->颜色主题，点击：安装其他颜色主题，输入one dark，找到one dark pro安装即可</p>
+				<img src="./images/onedarkpro01.png" alt="onedarkpro01.png" class="wow fadeInUp">
+				<img src="./images/onedarkpro02.png" alt="onedarkpro02.png" class="wow flipInX">
+				<img src="./images/onedarkpro03.png" alt="onedarkpro03.png" class="wow flipInY">
+				<p></p>
+				<p>7、在浏览器中打开html文件，点击最低下的那个选项（扩展程序），或者使用快捷键<em class="key">Ctrl+Shift+X</em>，输入<em class="key">view in browser</em>，安装即可，安装完成，右键index.html文件即可看到view in browser</p>
+				<img src="./images/viewinbrowser.png" alt="viewinbrowser.png" class="wow rotateIn">
+				<img src="./images/viewinbrowser02.png" alt="viewinbrowser02.png" class="wow slideInUp">
+				<p></p>
+				<p>8、添加sass支持：<em class="sass"><a href="https://www.sass.hk/skill/sass154.html" target="_blank">https://www.sass.hk/skill/sass154.html</a></em><br>
+				打开VSCode编辑器，然后按<em class="sass">ctrl+P</em>，键入<em class="sass">ext install live-sass</em>，安装<em class="sass">Live Sass Compiler</em>即可</p>
+				<img src="./images/sass.gif" alt="sass.gif" class="wow slideInDown">
+				<p></p>
+				<h2>参数</h2>
+				<pre>"liveSassCompile.settings.formats":[
+	// 扩展
+	{
+		"format": "compact",//可定制的出口CSS样式（expanded，compact，compressed，nested）
+		"extensionName": ".min.css",//编译后缀名
+		"savePath": null//编译保存的路径
+	}
+],
+"liveSassCompile.settings.excludeList": [
+	"**/node_modules/**",
+	".vscode/**"
+],</pre>
+				<p>8.1、按<em class="sass">F1</em>或<em class="sass">ctrl+shift+P</em>键入<em class="sass">Live Sass: Watch Sass</em>以开始实时编译，或者按键入<em class="sass">Live Sass: Stop Watching Sass</em>以停止实时编译。</p>
+				<p>8.2、按<em class="sass">F1</em>或<em class="sass">ctrl+shift+P</em>键入一次<em class="sass">Live Sass: Compile Sass - Without Watch Mode </em>以编译Sass或Scss。</p>
+				<p>9、添加autoprefixer扩展：点击最下面的那个图标（扩展程序），搜索<em class="key">autoprefixer</em>，直接安装是3.0.1版本的autoprefixer，安装好了之后点击插件的设置，点击安装另一个版本...，安装<em class="key">2.2.0</em>版本的<em class="key">autoprefixer</em></p>
+				<img src="./images/autoprefixer.png" alt="autoprefixer.png" class="wow slideInDown">
+				<p></p>
+				<p>9.1、设置settings.json：打开编辑器的设置（左上角文件-->首选项-->设置），搜索<em class="key">autoprefixer</em>，然后在<em class="key">Autoprefixer: Browsers</em>下面点击<em class="key">在settings.json中编辑</em></p>
+				<img src="./images/autoprefixer02.png" alt="autoprefixer02.png" class="wow slideInDown">
+				<p></p>
+				<p>9.2、settings.json添加如下代码</p>
+				<pre><em class="key">"autoprefixer.browsers": [
+        "ie >= 6",  //ie6以上
+        "firefox >= 8",
+        "chrome >= 24",
+        "Opera>=10"
+],</em>
+				</pre>
+				<img src="./images/autoprefixer03.png" alt="autoprefixer03.png" class="wow slideInDown">
+				<p></p>
+				<p>9.3、新建一个css文件（文件名可以自己取，我这边示例取名为autoprefixer.css），写一下css3中的display: flex;（未写兼容的），然后按下组合键<em class="key">Ctrl+Shift+P</em>，输入<em class="key">auto</em>，点击<em class="key">Autoprefix CSS</em>编译这个css文件，就可以给css文件中未兼容的代码加上兼容前缀了</p>
+				<img src="./images/autoprefixer04.png" alt="autoprefixer04.png" class="wow slideInDown">
+				<p></p>
+				<img src="./images/autoprefixer05.png" alt="autoprefixer05.png" class="wow slideInDown">
+				<p></p>
+				<p>9.4、在sass中使用autoprefixer：打开设置（没什么好说的），搜索<em class="key">sass</em>，点击扩展中的<em class="key">Live Sass Compile</em>，安装了<em class="key">autoprefixer</em>之后会在<em class="key">Live Sass Compile</em>中多出来一个选项<em class="key">Live Sass Compile › Settings: Autoprefix</em>，点击在<em class="key">在settings.json中编辑</em></p>
+				<img src="./images/autoprefixersass.png" alt="autoprefixersass.png" class="wow slideInDown">
+				<p></p>
+				<p>在settings.json中添加如下代码，执行<em class="key">Live Sass: Watch Sass</em>将sass文件编译为css文件的时候生成的css文件就可以带上兼容属性了</p>
+				<pre><em class="key">"liveSassCompile.settings.autoprefix": [
+        "ie >= 6",  //ie6以上
+        "firefox >= 8",
+        "chrome >= 24",
+        "Opera>=10"
+],</em></pre>
+				<img src="./images/autoprefixersass02.png" alt="autoprefixersass02.png" class="wow slideInDown">
+				<p></p>
+			</div>
+		</div>
+		<div style="height: 100px;"></div>
+		<!-- 回到顶部 -->
+		<div class="back"><i class="iconfont i_xiangshang"></i></div>
+		
+		<div class="progress"></div>
+		
+		<!-- 遮罩 -->
+		<div class="shadow">
+			<div class="hint">
+				<p>拖拽图片查看更多</p>
+				<p>点击图片以外区域关闭</p>
+			</div>
+			<div class="close"><i class="iconfont i_close2"></i></div>
+			<div class="origin"></div>
+		</div>
+
+		<script type="text/javascript" src="js/wow.min.js"></script>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+					new WOW().init();
+				};
+				
+				// 顶部进度条
+				let winH = document.documentElement.clientHeight, // $(window).height()
+					docH = document.documentElement.scrollHeight; // $(document).height()
+				console.log(winH);
+				console.log(docH);
+
+				$(window).scroll(function(){
+					// console.info($(window).scrollTop());
+					if($(window).scrollTop() >= 2000){
+						$('.back').fadeIn(300);
+					}else{
+						$('.back').fadeOut(300);
+					}
+					sessionStorage.setItem('scrollTop', $('html ,body').scrollTop());
+					// 滚动条与顶部总的距离=文档高度-window高度，顶部进度条的宽度=当前滚动条与顶部的距离/滚动条与顶部总的距离
+					let progressW = $(window).scrollTop()/(docH - winH);
+					$('.progress').css('width', progressW*100+'%');
+				})
+
+				var scrollTop = sessionStorage.getItem('scrollTop');
+				if(scrollTop == null || scrollTop == 'NaN' || scrollTop == 'undefined'){
+					var st = $('html ,body').scrollTop();
+					sessionStorage.setItem('scrollTop', st);
+				}else{
+					if(scrollTop >= 600){
+						$('.back').fadeIn(300);
+					}else{
+						$('.back').fadeOut(300);
+					}
+				}
+				$('.back').click(function(){
+					$('html ,body').animate({scrollTop: 0});
+					// $('html ,body').animate({scrollTop: 0},500);
+				});
+				
+				// 查看原图
+				function n(node){
+					return document.querySelector(node);
+				}
+				
+				let timer = null;
+				
+				// 竟然无法选取到所有的img标签！这是我没想到的
+				// document.querySelectorAll('img').onclick = function(){
+				// 	console.log('a');
+				// }
+				// 还是用事件委托吧
+				n('body').onclick = function(e){
+					// console.log(e.target.nodeName);
+					let tagName = e.target.nodeName.toLowerCase();
+					if(tagName == 'img'){
+						// let src = this.getAttribute('src');
+						// console.log(src);
+						let src = e.target.currentSrc;
+						console.log(src);
+						// 创建一个Image对象获取图片原尺寸
+						let img = new Image();
+						img.src = src;
+						console.log(img.width);
+						n('.origin').style.width = img.width + 'px';
+						n('.origin').style.height = img.height + 'px';
+						n('.origin').style.background =  'url(' + src + ')';
+						n('.shadow').style.display = 'flex';
+						n('body').style.overflowY = 'hidden';
+						n('.hint').style = 'opacity: 1;';
+						timer =  setTimeout(function(){
+							n('.hint').style = 'opacity: 0; z-index: -1;';
+						}, 5000);
+						
+						return false;
+					}
+					
+					// 写在这里的话，a标签的默认行为也被阻止了
+					// return false;
+				}
+				let curLeft = 0,
+					curTop = 0,
+					isDown = false;
+				
+				// 阻止事件冒泡，因为待会儿点.shadow元素的时候要关闭原图
+				n('.origin').onclick = function(e){
+					if(e.cancelBubble){
+						e.cancelBubble = true; // ie 阻止事件冒泡
+					}else{
+						e.stopPropagation(); // 其余浏览器 阻止事件冒泡
+					}
+				}
+				n('.origin').onmousedown = function(e){
+					e = e || window.event;
+					curLeft = e.clientX - this.offsetLeft;
+					curTop = e.clientY - this.offsetTop;
+					console.log(`${curLeft}，${curTop}`);
+					this.style.cursor = 'grabbing';
+					isDown = true;
+					return false;
+				};
+				// 移动端onmousedown事件
+				window.ontouchstart = function(e){
+					console.log('touchstart');
+				}
+				n('.origin').onmouseup = function(){
+					isDown = false;
+					this.style.cursor = 'grab';
+					return false;
+				}
+				// 移动端onmouseup事件
+				window.ontouchend = function(){
+					console.log('touchend');
+				}
+				// n('.origin').ontouchend = function(){
+				// 	console.log('touchend');
+				// }
+				window.addEventListener('mousemove', function(e){
+					if(isDown){
+						let left = e.clientX - curLeft;
+						let top = e.clientY - curTop;
+						n('.origin').style.left = left + 'px';
+						n('.origin').style.top = top + 'px';
+					}
+				}, false);
+				// 移动端onmousemove事件
+				window.ontouchmove = function(e){
+					console.log('touchmove');
+				}
+				// addEventListener里面的第三个参数为false时表示事件冒泡，true表示事件捕获
+				// https://www.cnblogs.com/zdhblog/p/6845879.html?utm_source=itdadao&utm_medium=referral
+				
+				// 关闭原图
+				n('.shadow').onclick = function(){
+					this.style = 'display: none;';
+					n('body').style.overflowY = 'scroll';
+					// 关闭图片则移除top，left属性，否则会一直保持上次的left跟top
+					n('.origin').style.left = '';
+					n('.origin').style.top = '';
+					n('.hint').style = 'z-index: 999;';
+					clearTimeout(timer);
+				};
+				n('.close').onclick = function(){
+					n('.shadow').style = 'display: none;';
+					n('body').style.overflowY = 'scroll';
+					// 关闭图片则移除top，left属性，否则会一直保持上次的left跟top
+					n('.origin').style.left = '';
+					n('.origin').style.top = '';
+					n('.hint').style = 'z-index: 999;';
+					clearTimeout(timer);
+					return false;
+				}
+			})
+		</script>
+	</body>
+</html>
