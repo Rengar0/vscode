@@ -166,10 +166,19 @@
 				
 				let timer = null;
 				
-				// 竟然无法选取到所有的img标签！这是我没想到的
+				// 选取所有的img标签，需要遍历给他注册事件处理函数document.querySelectorAll('img').length
 				// document.querySelectorAll('img').onclick = function(){
 				// 	console.log('a');
 				// }
+				// let imgElm = document.querySelectorAll('img');
+				// console.log(imgElm);
+				// for(let i = 0; i < imgElm.length; i++){
+				// 	imgElm[i].onclick = function(){
+						
+				// 	}
+				// }
+				
+				
 				// 还是用事件委托吧
 				n('body').onclick = function(e){
 					// console.log(e.target.nodeName);
@@ -183,9 +192,12 @@
 						let img = new Image();
 						img.src = src;
 						console.log(img.width);
-						n('.origin').style.width = img.width + 'px';
-						n('.origin').style.height = img.height + 'px';
-						n('.origin').style.background =  'url(' + src + ')';
+						// n('.origin').style.width = img.width + 'px';
+						// n('.origin').style.height = img.height + 'px';
+						// n('.origin').style.background =  'url(' + src + ')';
+						
+						// 直接用ES6的字符串啦，学了不用你想干嘛？
+						n('.origin').style = `width: ${img.width}px; height: ${img.height}px; background: url('${src}');`;
 						n('.shadow').style.display = 'flex';
 						n('body').style.overflowY = 'hidden';
 						n('.hint').style = 'opacity: 1;';
